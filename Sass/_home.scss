@@ -1,0 +1,97 @@
+.main{
+    opacity: 0;
+    animation: display-block 0s 3s 1 reverse forwards;
+
+}
+
+.location{
+    background-color: $colour-grey-1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i{
+        padding-right: 20px;
+    }
+}
+
+.explorate{
+    background-color: $colour-grey-2;
+    text-align: center;
+    &_text{
+        margin-top: 14px;
+        font-size: 20px;
+    }
+}
+
+.functioning{
+    &_title{
+    margin-bottom: 26px;
+    }
+    &_stages{
+        padding-left: 13px;
+        @media (min-width: 992px) {
+            display: flex;
+            justify-content: space-between;
+        }
+        &_item{
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-bottom: 28px;
+            padding: 32px;
+            background-color: $colour-grey-2;
+            border-radius: 30px;
+            box-shadow: $box-shadow;
+            font-weight: bold;
+            @media (min-width: 992px){
+                margin-bottom: 0;
+                flex: 1;
+                margin-right: 30px;
+            }
+            &:last-child{
+                margin: 0;
+                background-color: #F5EDFF;
+                i{
+                    color: $colour-primary;
+                }
+            }
+            &_number{
+                position: absolute;
+                left: -13px;
+                background-color: $colour-primary;
+                color: white;
+                border-radius: 20px;
+                height: 26px;
+                width: 26px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+            }
+            &_icon{
+                color: $colour-grey-3;
+                width: 46px;
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.restaurants{
+    background-color: $colour-grey-2;
+    @media (min-width: 992px){
+        padding-right: 0;
+    }
+    &_cards{
+        article:last-child .card{
+            margin-bottom: 0;
+        }
+        @media (min-width: 992px){
+            display: flex;
+            overflow: hidden;
+        }
+    }
+    &_title{
+        margin-bottom: 26px;
+    }
+}
