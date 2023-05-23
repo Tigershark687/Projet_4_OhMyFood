@@ -1,0 +1,80 @@
+.menu_img{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    object-fit: cover;
+    height: 420px;
+}
+
+.menu{
+    margin-top: 230px;
+    background-color: $colour-grey-2;
+    border-radius: 40px 40px 0 0;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: 992px){
+        margin: 300px 12% 0;
+    }
+    &_title{
+        font-family: $font-family-logo-title;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        @media (min-width: 992px){
+            width: auto;
+        }
+        &_favorite{
+            right: 30px;
+            @media (min-width: 992px){
+                position: initial;
+                margin-left: 30px;
+            }
+        }
+    }
+    &_part{
+        width: 100%;
+        &_title{
+        padding-top: 22px;
+        }
+        &_bar{
+        width: 40px;
+        padding: 1.5px;
+        margin: 6px 0 18px 0;
+        background-color: $colour-green-1;
+        }
+        &_card{
+            flex-direction: row;
+            max-height: 76px;
+            opacity: 0;
+            @media (min-width: 992px){
+                width: 100%;
+                margin: 0 0 20px 0;
+            }
+            @for $i from 1 through 4{
+                &:nth-of-type(#{$i}){
+                    animation: appearance 0.5s #{$i * 0.5}s 1 forwards;
+                }
+            }
+            &_info{
+                flex: 1;
+                max-width: calc(100% - 60px);
+            }
+            &:hover {
+                .card_select {
+                    width: 60px;
+                }
+                .menu_part_card_info {
+                    max-width: calc(100% - 120px);
+                }
+            }
+        }
+    }
+    &_btn{
+        padding: 16px 50px;
+    }
+}
