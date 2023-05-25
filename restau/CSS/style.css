@@ -455,6 +455,9 @@ button {
     margin: 0 0 20px 0;
   }
 }
+.menu i {
+  display: flex;
+}
 
 /* animations menu */ 
 
